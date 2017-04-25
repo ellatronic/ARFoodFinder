@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4905CA6A1EAFFC58002CA57F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905CA691EAFFC58002CA57F /* APIManager.swift */; };
+		4905CA6C1EAFFEF2002CA57F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905CA6B1EAFFEF2002CA57F /* Place.swift */; };
 		490BBDF41EAFEE5D00F37467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */; };
 		490BBDF61EAFEE5D00F37467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBDF51EAFEE5D00F37467 /* ViewController.swift */; };
 		490BBDF91EAFEE5D00F37467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490BBDF71EAFEE5D00F37467 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4905CA691EAFFC58002CA57F /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		4905CA6B1EAFFEF2002CA57F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		490BBDF01EAFEE5D00F37467 /* ARFoodFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFoodFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		490BBDF51EAFEE5D00F37467 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */,
 				490BBDF51EAFEE5D00F37467 /* ViewController.swift */,
+				4905CA6B1EAFFEF2002CA57F /* Place.swift */,
+				4905CA691EAFFC58002CA57F /* APIManager.swift */,
 				490BBE211EAFEF3000F37467 /* HDAugmentedReality */,
 				490BBDF71EAFEE5D00F37467 /* Main.storyboard */,
 				490BBDFA1EAFEE5D00F37467 /* Assets.xcassets */,
@@ -331,11 +337,13 @@
 				490BBE2E1EAFEF6F00F37467 /* ARViewController.swift in Sources */,
 				490BBDF61EAFEE5D00F37467 /* ViewController.swift in Sources */,
 				490BBE2A1EAFEF6F00F37467 /* ARAnnotation.swift in Sources */,
+				4905CA6A1EAFFC58002CA57F /* APIManager.swift in Sources */,
 				490BBE2F1EAFEF6F00F37467 /* DebugMapViewController.swift in Sources */,
 				490BBE2B1EAFEF6F00F37467 /* ARAnnotationView.swift in Sources */,
 				490BBE2D1EAFEF6F00F37467 /* ARTrackingManager.swift in Sources */,
 				490BBE2C1EAFEF6F00F37467 /* ARConfiguration.swift in Sources */,
 				490BBDF41EAFEE5D00F37467 /* AppDelegate.swift in Sources */,
+				4905CA6C1EAFFEF2002CA57F /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +594,7 @@
 				490BBE1A1EAFEE5D00F37467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		490BBE1B1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +603,7 @@
 				490BBE1D1EAFEE5D00F37467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		490BBE1E1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinderUITests" */ = {
 			isa = XCConfigurationList;
@@ -602,6 +612,7 @@
 				490BBE201EAFEE5D00F37467 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
