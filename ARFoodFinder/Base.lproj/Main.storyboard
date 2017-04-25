@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARFoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-N6-ZNO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-rX-ZTY">
+                                <rect key="frame" x="156" y="617" width="62" height="30"/>
+                                <state key="normal" title="CAMERA"/>
+                                <connections>
+                                    <action selector="showARController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atx-GQ-cwO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GEn-dC-myX"/>
+                            <constraint firstAttribute="bottom" secondItem="K1b-N6-ZNO" secondAttribute="bottom" id="O1A-O1-Yjt"/>
+                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OW3-K5-oTs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7nI-rX-ZTY" secondAttribute="bottom" constant="20" id="ksv-n5-icW"/>
+                            <constraint firstAttribute="trailing" secondItem="K1b-N6-ZNO" secondAttribute="trailing" id="lsn-eF-blK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7nI-rX-ZTY" secondAttribute="trailing" constant="141" id="rBr-AU-G6d"/>
+                            <constraint firstItem="7nI-rX-ZTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="140" id="rek-YU-aau"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="K1b-N6-ZNO" id="pN5-a9-P0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
