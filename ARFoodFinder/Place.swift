@@ -10,14 +10,19 @@ import Foundation
 import CoreLocation
 
 class Place: ARAnnotation {
-    var id: String
-    var name: String
-    var formattedPhone: String
+    let id: String
+    let name: String
+    let formattedPhone: String
+    let formattedAddress: String
 
-    init(id: String, name: String, formattedPhone: String) {
+    init(location: CLLocation, id: String, name: String, formattedPhone: String, formattedAddress: String) {
         self.id = id
         self.name = name
         self.formattedPhone = formattedPhone
+        self.formattedAddress = formattedAddress
+
+        super.init()
+        self.location = location
     }
 
     static func create(from dictionary: [String: Any]) -> Place? {
@@ -28,10 +33,15 @@ class Place: ARAnnotation {
         guard let contact = venue["contact"] as? [String: Any] else { return nil }
         guard let formattedPhone = contact["formattedPhone"] as? String else { return nil }
 
-//        guard let
+        guard let jsonLocation = venue["location"] as? [String: Any] else { return nil }
+        guard let lat = jsonLocation["lat"] as? CLLocationDegrees else { return nil }
+        guard let lng = jsonLocation["lng"] as? CLLocationDegrees else { return nil }
+        let location = CLLocation(latitude: lat, longitude: lng)
 
-        
-        return Place(id: id, name: name, formattedPhone: formattedPhone)
+        guard let addressArray = jsonLocation["formattedAddress"] as? [String] else { return nil }
+        let formattedAddress = "\(addressArray[0]) \n\(addressArray[1])"
+
+        return Place(location: location, id: id, name: name, formattedPhone: formattedPhone, formattedAddress: formattedAddress)
     }
 //    var author: String
 //    var title: String

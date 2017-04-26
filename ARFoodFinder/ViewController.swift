@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+//        locationManager.startUpdatingLocation()
         locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
     }
@@ -37,6 +38,7 @@ extension ViewController: CLLocationManagerDelegate {
 
             //2
             if location.horizontalAccuracy < 100 {
+//                manager.stopUpdatingLocation()
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
                 mapView.region = region
