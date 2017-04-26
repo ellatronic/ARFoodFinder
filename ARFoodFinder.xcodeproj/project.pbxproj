@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4905CA6A1EAFFC58002CA57F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905CA691EAFFC58002CA57F /* APIManager.swift */; };
 		4905CA6C1EAFFEF2002CA57F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905CA6B1EAFFEF2002CA57F /* Place.swift */; };
+		4905CA6E1EB117BF002CA57F /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905CA6D1EB117BF002CA57F /* PlaceAnnotation.swift */; };
 		490BBDF41EAFEE5D00F37467 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */; };
 		490BBDF61EAFEE5D00F37467 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBDF51EAFEE5D00F37467 /* ViewController.swift */; };
 		490BBDF91EAFEE5D00F37467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490BBDF71EAFEE5D00F37467 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		4905CA691EAFFC58002CA57F /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		4905CA6B1EAFFEF2002CA57F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		4905CA6D1EB117BF002CA57F /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		490BBDF01EAFEE5D00F37467 /* ARFoodFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFoodFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		490BBDF51EAFEE5D00F37467 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */,
 				490BBDF51EAFEE5D00F37467 /* ViewController.swift */,
+				4905CA6D1EB117BF002CA57F /* PlaceAnnotation.swift */,
 				4905CA6B1EAFFEF2002CA57F /* Place.swift */,
 				4905CA691EAFFC58002CA57F /* APIManager.swift */,
 				490BBE211EAFEF3000F37467 /* HDAugmentedReality */,
@@ -336,6 +339,7 @@
 			files = (
 				490BBE2E1EAFEF6F00F37467 /* ARViewController.swift in Sources */,
 				490BBDF61EAFEE5D00F37467 /* ViewController.swift in Sources */,
+				4905CA6E1EB117BF002CA57F /* PlaceAnnotation.swift in Sources */,
 				490BBE2A1EAFEF6F00F37467 /* ARAnnotation.swift in Sources */,
 				4905CA6A1EAFFC58002CA57F /* APIManager.swift in Sources */,
 				490BBE2F1EAFEF6F00F37467 /* DebugMapViewController.swift in Sources */,

@@ -13,7 +13,8 @@ import CoreLocation
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     fileprivate let locationManager = CLLocationManager()
-    var places = [Place]()
+    fileprivate var startedLoadingPOIs = false
+    fileprivate var places = [Place]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,8 @@ extension ViewController: CLLocationManagerDelegate {
         if locations.count > 0 {
             let location = locations.last!
             print("Accuracy: \(location.horizontalAccuracy)")
-
-            //2
-            if location.horizontalAccuracy < 100 {
+            
+//            if location.horizontalAccuracy < 100 {
 //                manager.stopUpdatingLocation()
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
@@ -47,11 +47,16 @@ extension ViewController: CLLocationManagerDelegate {
                 let apiManager = APIManager()
                 apiManager.loadPOIs(for: location, within: 1_000, completion: { (loadedPlaces) in
                     self.places = loadedPlaces
+                    let annotation = PlaceAnnotation(location: self.places[0].location!.coordinate, title: self.places[0].name)
+//                    for place in self.places {
+//                        let annotation = PlaceAnnotation(location: place.location!.coordinate, title: place.name)
+//                    }
                     DispatchQueue.main.async {
-                        dump(self.places)
+                        self.mapView.addAnnotation(annotation)
+//                        dump(self.places)
                     }
                 })
-            }
+//            }
         }
     }
 
