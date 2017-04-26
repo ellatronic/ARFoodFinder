@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     fileprivate let locationManager = CLLocationManager()
     fileprivate var startedLoadingPOIs = false
     fileprivate var places = [Place]()
+    fileprivate var arViewController: ARViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showARController(_ sender: Any) {
+        arViewController = ARViewController()
+        arViewController.dataSource = self
+        arViewController.maxVisibleAnnotations = 30
+        arViewController.headingSmoothingFactor = 0.05
+        arViewController.setAnnotations(places)
+        self.present(arViewController, animated: true, completion: nil)
     }
 
 }
@@ -68,5 +75,20 @@ extension ViewController: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to get user's location")
+    }
+}
+
+extension ViewController: ARDataSource, AnnotationViewDelegate {
+    func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let annotationView = AnnotationView()
+        annotationView.annotation = viewForAnnotation
+        annotationView.delegate = self
+        annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+
+        return annotationView
+    }
+
+    func didTouch(annotationView: AnnotationView) {
+        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
     }
 }
