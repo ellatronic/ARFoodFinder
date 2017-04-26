@@ -12,7 +12,7 @@ import CoreLocation
 class APIManager {
 
     func loadPOIs(for location: CLLocation, within radius: Int = 1000, completion: @escaping ([Place]) -> Void) {
-        print("Load POIs")
+        print("Execute API Manager")
 
         let apiURL = "https://api.foursquare.com/v2/venues/explore"
         let clientID = "U0H3VHFNJFUGNIMPPZWEM5YQ5SLY2TLCBQNWZBYKYVYVX5AL"

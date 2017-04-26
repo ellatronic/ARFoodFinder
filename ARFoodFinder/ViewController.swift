@@ -21,8 +21,8 @@ class ViewController: UIViewController {
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-//        locationManager.startUpdatingLocation()
-        locationManager.requestLocation()
+        locationManager.startUpdatingLocation()
+//        locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
     }
 
@@ -37,26 +37,32 @@ extension ViewController: CLLocationManagerDelegate {
             let location = locations.last!
             print("Accuracy: \(location.horizontalAccuracy)")
             
-//            if location.horizontalAccuracy < 100 {
-//                manager.stopUpdatingLocation()
+            if location.horizontalAccuracy < 100 {
+                manager.stopUpdatingLocation()
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
                 mapView.region = region
-                // More code later...
 
-                let apiManager = APIManager()
-                apiManager.loadPOIs(for: location, within: 1_000, completion: { (loadedPlaces) in
-                    self.places = loadedPlaces
-                    let annotation = PlaceAnnotation(location: self.places[0].location!.coordinate, title: self.places[0].name)
-//                    for place in self.places {
-//                        let annotation = PlaceAnnotation(location: place.location!.coordinate, title: place.name)
-//                    }
-                    DispatchQueue.main.async {
-                        self.mapView.addAnnotation(annotation)
-//                        dump(self.places)
-                    }
-                })
-//            }
+                if !startedLoadingPOIs {
+                    startedLoadingPOIs = true
+
+                    let apiManager = APIManager()
+                    apiManager.loadPOIs(for: location, within: 1_000, completion: { (loadedPlaces) in
+                        print("Finding POIs")
+                        self.places = loadedPlaces
+
+                        let annotations = loadedPlaces.map({ (place) -> PlaceAnnotation in
+                            return PlaceAnnotation(location: place.location!.coordinate, title: place.name)
+                        })
+
+                        DispatchQueue.main.async {
+                            annotations.forEach({ (annotation) in
+                                self.mapView.addAnnotation(annotation)
+                            })
+                        }
+                    })
+                }
+            }
         }
     }
 
