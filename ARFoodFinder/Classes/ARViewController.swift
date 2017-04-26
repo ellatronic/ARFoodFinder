@@ -1158,20 +1158,3 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
     public var closeButtonEnabled = true
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

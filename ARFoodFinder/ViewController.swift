@@ -36,6 +36,15 @@ class ViewController: UIViewController {
         self.present(arViewController, animated: true, completion: nil)
     }
 
+    // MARK: - Helper Functions
+    func showInfoView(forPlace place: Place) {
+        //1
+        let alert = UIAlertController(title: place.name , message: place.id, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        //2
+        arViewController.present(alert, animated: true, completion: nil)
+    }
+
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -89,6 +98,11 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
     }
 
     func didTouch(annotationView: AnnotationView) {
-        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
+//        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
+        print(annotationView)
+//        if let annotation = annotationView.annotation as? Place {
+//            self.showInfoView(forPlace: Place)
+//        }
+
     }
 }
