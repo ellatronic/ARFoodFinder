@@ -9,28 +9,25 @@
 import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var backButton: UIButton!
+    var venueID: String?
 
-    var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        webView = UIWebView(frame: UIScreen.main.bounds)
         webView.delegate = self
         view.addSubview(webView)
-        if let url = URL(string: "https://apple.com") {
+        guard let id = venueID  else { return }
+        print(id)
+        if let url = URL(string: "https://foursquare.com/v/\(id)?ref=U0H3VHFNJFUGNIMPPZWEM5YQ5SLY2TLCBQNWZBYKYVYVX5AL") {
+            print(url)
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
-    */
-
 }

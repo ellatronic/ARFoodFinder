@@ -46,6 +46,7 @@ class ViewController: UIViewController {
     }
     func showWebInfoView(forPlace place: Place) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        viewController.venueID = place.id
         arViewController.present(viewController, animated: true, completion: nil)
     }
 

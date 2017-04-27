@@ -63,12 +63,42 @@
                     <view key="view" contentMode="scaleToFill" id="t1k-E5-oCc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ang-7e-kES">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-wT-m6X">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7MU-pi-hWn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="L0l-4h-Qcg" eventType="touchUpInside" id="ZDe-pA-ceJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b6f-wT-m6X" firstAttribute="top" secondItem="ang-7e-kES" secondAttribute="bottom" id="7to-0c-bpe"/>
+                            <constraint firstAttribute="bottom" secondItem="b6f-wT-m6X" secondAttribute="bottom" id="CHQ-Js-I7n"/>
+                            <constraint firstAttribute="trailing" secondItem="b6f-wT-m6X" secondAttribute="trailing" id="Icb-UF-M6f"/>
+                            <constraint firstItem="b6f-wT-m6X" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="L4y-Nm-C4u"/>
+                            <constraint firstItem="ang-7e-kES" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="pFH-zm-t32"/>
+                            <constraint firstItem="ang-7e-kES" firstAttribute="top" secondItem="Nh7-B0-rh9" secondAttribute="bottom" id="tUB-je-LLE"/>
+                            <constraint firstAttribute="trailing" secondItem="ang-7e-kES" secondAttribute="trailing" id="wCH-DR-tLQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="b6f-wT-m6X" id="Jmf-kB-XUD"/>
+                        <outlet property="webView" destination="ang-7e-kES" id="mOt-lT-JMU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7in-3Y-030" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="123"/>
+            <point key="canvasLocation" x="880.79999999999995" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
