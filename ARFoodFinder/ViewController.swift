@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
-//        locationManager.requestLocation()
+        //        locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
     }
 
@@ -44,6 +44,10 @@ class ViewController: UIViewController {
         //2
         arViewController.present(alert, animated: true, completion: nil)
     }
+    func showWebInfoView(forPlace place: Place) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        arViewController.present(viewController, animated: true, completion: nil)
+    }
 
 }
 
@@ -52,7 +56,7 @@ extension ViewController: CLLocationManagerDelegate {
         if locations.count > 0 {
             let location = locations.last!
             print("Accuracy: \(location.horizontalAccuracy)")
-            
+
             if location.horizontalAccuracy < 100 {
                 manager.stopUpdatingLocation()
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
@@ -98,11 +102,12 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
     }
 
     func didTouch(annotationView: AnnotationView) {
-//        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
-        print(annotationView)
-//        if let annotation = annotationView.annotation as? Place {
-//            self.showInfoView(forPlace: Place)
-//        }
-
+        //        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
+        if let annotation = annotationView.annotation as? Place {
+            print(annotation.name)
+//            self.showInfoView(forPlace: annotation)
+            print(annotation.id)
+            self.showWebInfoView(forPlace: annotation)
+        }
     }
 }

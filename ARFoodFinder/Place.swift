@@ -43,6 +43,7 @@ class Place: ARAnnotation {
 
         return Place(location: location, id: id, name: name, formattedPhone: formattedPhone, formattedAddress: formattedAddress)
     }
+    
 //    var author: String
 //    var title: String
 //    var articleURL: String

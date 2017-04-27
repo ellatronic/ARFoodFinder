@@ -28,6 +28,7 @@
 		490BBE361EAFEF8400F37467 /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BBE321EAFEF8400F37467 /* hdar_close.png */; };
 		490BBE371EAFEF8400F37467 /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BBE331EAFEF8400F37467 /* hdar_close@2x.png */; };
 		490BBE381EAFEF8400F37467 /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BBE341EAFEF8400F37467 /* hdar_close@3x.png */; };
+		49434D501EB2859000760CA1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49434D4F1EB2859000760CA1 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		490BBE321EAFEF8400F37467 /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
 		490BBE331EAFEF8400F37467 /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
 		490BBE341EAFEF8400F37467 /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		49434D4F1EB2859000760CA1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */,
 				490BBDF51EAFEE5D00F37467 /* ViewController.swift */,
+				49434D4F1EB2859000760CA1 /* WebViewController.swift */,
 				4905CA6F1EB12A99002CA57F /* AnnotationView.swift */,
 				4905CA6D1EB117BF002CA57F /* PlaceAnnotation.swift */,
 				4905CA6B1EAFFEF2002CA57F /* Place.swift */,
@@ -351,6 +354,7 @@
 				490BBE2D1EAFEF6F00F37467 /* ARTrackingManager.swift in Sources */,
 				490BBE2C1EAFEF6F00F37467 /* ARConfiguration.swift in Sources */,
 				490BBDF41EAFEE5D00F37467 /* AppDelegate.swift in Sources */,
+				49434D501EB2859000760CA1 /* WebViewController.swift in Sources */,
 				4905CA6C1EAFFEF2002CA57F /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

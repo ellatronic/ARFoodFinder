@@ -53,4 +53,8 @@ class APIManager {
         }
         task.resume()
     }
+
+    func loadPlaceDetails(forPlace: Place, completion: @escaping (String) -> Void) {
+
+    }
 }

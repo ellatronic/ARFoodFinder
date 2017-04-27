@@ -52,5 +52,23 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Jae-jo-P6S">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="L0l-4h-Qcg" customClass="WebViewController" customModule="ARFoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nh7-B0-rh9"/>
+                        <viewControllerLayoutGuide type="bottom" id="NPp-Ps-CYp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t1k-E5-oCc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7in-3Y-030" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="123"/>
+        </scene>
     </scenes>
 </document>
