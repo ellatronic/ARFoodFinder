@@ -97,7 +97,20 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
         let annotationView = AnnotationView()
         annotationView.annotation = viewForAnnotation
         annotationView.delegate = self
-        annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        annotationView.loadUI()
+
+        guard let place = viewForAnnotation as? Place else {
+            return annotationView
+        }
+
+        guard let titleLabel = annotationView.titleLabel else {
+            return annotationView
+        }
+
+        let expectedLabelSize = place.name.size(attributes: [NSFontAttributeName: titleLabel.font])
+        let labelWidth = expectedLabelSize.width + 75.0 > 200.0 ? expectedLabelSize.width + 75.0: 200.0
+
+        annotationView.frame = CGRect(x: 0, y: 0, width: labelWidth, height: 70)
 
         return annotationView
     }
@@ -105,9 +118,9 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
     func didTouch(annotationView: AnnotationView) {
         //        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
         if let annotation = annotationView.annotation as? Place {
-            print(annotation.name)
+//            print(annotation.name)
 //            self.showInfoView(forPlace: annotation)
-            print(annotation.id)
+//            print(annotation.id)
             self.showWebInfoView(forPlace: annotation)
         }
     }

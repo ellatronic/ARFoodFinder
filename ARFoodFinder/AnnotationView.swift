@@ -15,6 +15,10 @@ protocol AnnotationViewDelegate {
 class AnnotationView: ARAnnotationView {
     var titleLabel: UILabel?
     var distanceLabel: UILabel?
+    var ratingLabel: UILabel?
+    var backgroundView: UIView?
+    var pinImage: UIImageView?
+    var openLabel: UILabel?
     var delegate: AnnotationViewDelegate?
 
     override func didMoveToSuperview() {
@@ -25,8 +29,12 @@ class AnnotationView: ARAnnotationView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        titleLabel?.frame = CGRect(x: 10, y: 0, width: self.frame.size.width, height: 30)
-        distanceLabel?.frame = CGRect(x: 10, y: 30, width: self.frame.size.width, height: 20)
+        titleLabel?.frame = CGRect(x: 66, y: 8, width: self.frame.size.width - 66, height: 22.0)
+        distanceLabel?.frame = CGRect(x: 135.5, y: 47, width: self.frame.size.width - 135.5, height: 15.0)
+        backgroundView?.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 70)
+        pinImage = UIImageView(frame: CGRect(x: 16, y: 8, width: 37.76, height: 54))
+        ratingLabel?.frame = CGRect(x: 66, y: 29.5, width: self.frame.size.width - 66, height: 18.0)
+        openLabel?.frame = CGRect(x: 66, y: 47, width: self.frame.size.width  - 66, height: 15.0)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -36,24 +44,54 @@ class AnnotationView: ARAnnotationView {
     func loadUI() {
         titleLabel?.removeFromSuperview()
         distanceLabel?.removeFromSuperview()
+        backgroundView?.removeFromSuperview()
+        pinImage?.removeFromSuperview()
+        openLabel?.removeFromSuperview()
+        ratingLabel?.removeFromSuperview()
 
-        let label = UILabel(frame: CGRect(x: 10, y: 0, width: self.frame.size.width, height: 30))
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.numberOfLines = 0
-        label.backgroundColor = UIColor(white: 0.3, alpha: 0.7)
-        label.textColor = UIColor.white
-        self.addSubview(label)
+        backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 70))
+        backgroundView?.backgroundColor = UIColor(white: 1, alpha: 0.80)
+        backgroundView?.layer.cornerRadius = 10.0
+        self.addSubview(backgroundView!)
+
+        pinImage = UIImageView(frame: CGRect(x: 16, y: 8, width: 37.76, height: 54))
+        pinImage?.image = UIImage(named: "Pin")
+        pinImage?.contentMode = UIViewContentMode.scaleAspectFit
+        self.backgroundView?.addSubview(pinImage!)
+
+        let label = UILabel(frame: CGRect(x: 66, y: 8, width: self.frame.size.width, height: 22.0))
+        label.font = UIFont(name: "Montserrat-Bold", size: 18)
+        label.numberOfLines = 1
+        label.textColor = UIColor.black
+        self.backgroundView?.addSubview(label)
         self.titleLabel = label
 
-        distanceLabel = UILabel(frame: CGRect(x: 10, y: 30, width: self.frame.size.width, height: 20))
-        distanceLabel?.backgroundColor = UIColor(white: 0.3, alpha: 0.7)
-        distanceLabel?.textColor = UIColor.green
-        distanceLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.addSubview(distanceLabel!)
+        distanceLabel = UILabel(frame: CGRect(x: 66, y: 47, width: self.frame.size.width, height: 15.0))
+        distanceLabel?.textColor = UIColor.black
+        distanceLabel?.font = UIFont(name: "Montserrat-Regular", size: 12)
+        self.backgroundView?.addSubview(distanceLabel!)
+
+        ratingLabel = UILabel(frame: CGRect(x: 66, y: 29.5, width: self.frame.size.width, height: 18.0))
+        ratingLabel?.textColor = UIColor.black
+        ratingLabel?.font = UIFont(name: "Montserrat-Regular", size: 14)
+        self.backgroundView?.addSubview(ratingLabel!)
+
+        openLabel = UILabel(frame: CGRect(x: 66, y: 47, width: self.frame.size.width, height: 18.0))
+        openLabel?.font = UIFont(name: "Montserrat-Black", size: 12)
+        self.backgroundView?.addSubview(openLabel!)
 
         if let annotation = annotation as? Place {
             titleLabel?.text = annotation.name
             distanceLabel?.text = String(format: "%.2f mi", annotation.distanceFromUser * 0.000621371)
+            ratingLabel?.text = String("rating: \(annotation.rating)")
+
+            if annotation.isOpen {
+                openLabel?.text = "Open"
+                openLabel?.textColor = UIColor(red: 63/255.0, green: 195/255.0, blue: 128/255.0, alpha: 1)
+            } else {
+                openLabel?.text = "Closed"
+                openLabel?.textColor = UIColor(red: 248/255.0, green: 40/255.0, blue: 22/255.0, alpha: 1)
+            }
         }
     }
 }

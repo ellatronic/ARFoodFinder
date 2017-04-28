@@ -14,12 +14,16 @@ class Place: ARAnnotation {
     let name: String
     let formattedPhone: String
     let formattedAddress: String
+    let rating: Double
+    let isOpen: Bool
 
-    init(location: CLLocation, id: String, name: String, formattedPhone: String, formattedAddress: String) {
+    init(location: CLLocation, id: String, name: String, formattedPhone: String, formattedAddress: String, rating: Double, isOpen: Bool) {
         self.id = id
         self.name = name
         self.formattedPhone = formattedPhone
         self.formattedAddress = formattedAddress
+        self.rating = rating
+        self.isOpen = isOpen
 
         super.init()
         self.location = location
@@ -29,6 +33,8 @@ class Place: ARAnnotation {
         guard let venue = dictionary["venue"] as? [String: Any] else { return nil }
         guard let id = venue["id"] as? String else { return nil }
         guard let name = venue["name"] as? String else { return nil }
+
+        guard let rating = venue["rating"] as? Double else { return nil }
 
         guard let contact = venue["contact"] as? [String: Any] else { return nil }
         guard let formattedPhone = contact["formattedPhone"] as? String else { return nil }
@@ -41,7 +47,10 @@ class Place: ARAnnotation {
         guard let addressArray = jsonLocation["formattedAddress"] as? [String] else { return nil }
         let formattedAddress = "\(addressArray[0]) \n\(addressArray[1])"
 
-        return Place(location: location, id: id, name: name, formattedPhone: formattedPhone, formattedAddress: formattedAddress)
+        guard let hours = venue["hours"] as? [String: Any] else { return nil }
+        guard let isOpen = hours["isOpen"] as? Bool else { return nil }
+
+        return Place(location: location, id: id, name: name, formattedPhone: formattedPhone, formattedAddress: formattedAddress, rating: rating, isOpen: isOpen)
     }
     
 //    var author: String

@@ -23,7 +23,7 @@ class APIManager {
         let longitude = location.coordinate.longitude
         let baseURLString = apiURL + "?client_id=\(clientID)&client_secret=\(clientSecret)&v=\(version)&ll=\(latitude),\(longitude)&radius=\(radius)&section=\(section)&venuePhotos=1"
 
-        print(baseURLString)
+//        print(baseURLString)
 
         guard let url = URL(string: baseURLString) else { return }
 
@@ -54,7 +54,7 @@ class APIManager {
         task.resume()
     }
 
-    func loadPlaceDetails(forPlace: Place, completion: @escaping (String) -> Void) {
-
-    }
+//    func loadPlaceDetails(forPlace: Place, completion: @escaping (String) -> Void) {
+//
+//    }
 }
