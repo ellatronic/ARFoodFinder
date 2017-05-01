@@ -46,11 +46,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-N6-ZNO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-N6-ZNO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-rX-ZTY">
-                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <rect key="frame" x="170" y="641" width="75" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="CameraButton"/>
                                 <connections>
@@ -60,10 +60,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="K1b-N6-ZNO" secondAttribute="bottom" id="O1A-O1-Yjt"/>
-                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OW3-K5-oTs"/>
-                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cuR-rZ-Jif"/>
-                            <constraint firstAttribute="trailing" secondItem="K1b-N6-ZNO" secondAttribute="trailing" id="lsn-eF-blK"/>
+                            <constraint firstAttribute="bottom" secondItem="K1b-N6-ZNO" secondAttribute="bottom" id="BwE-eQ-Jbm"/>
+                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IX5-kv-vH8"/>
+                            <constraint firstAttribute="trailing" secondItem="K1b-N6-ZNO" secondAttribute="trailing" id="Lok-Ze-Qdf"/>
+                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eXX-Ix-2xw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="117" y="122"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Jae-jo-P6S">
