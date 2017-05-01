@@ -12,6 +12,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var cameraButton: UIButton!
     fileprivate let locationManager = CLLocationManager()
     fileprivate var startedLoadingPOIs = false
     fileprivate var places = [Place]()
@@ -25,6 +26,12 @@ class ViewController: UIViewController {
         locationManager.startUpdatingLocation()
         //        locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
+
+        cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton"), for: .normal)
+        cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton-Selected"), for: .highlighted)
+        cameraButton.adjustsImageWhenHighlighted = false
+        cameraButton.frame = CGRect(x: (self.view.bounds.size.width / 2) - 37.5, y: self.view.bounds.size.height - 95, width: 75, height: 75)
+        cameraButton.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin]
     }
 
     @IBAction func showARController(_ sender: Any) {

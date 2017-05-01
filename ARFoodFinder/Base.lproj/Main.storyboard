@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -53,12 +52,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-N6-ZNO">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-rX-ZTY">
-                                <rect key="frame" x="153" y="614" width="69" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="CAMERA"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-rX-ZTY">
+                                <rect key="frame" x="150" y="572" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="CameraButton"/>
                                 <connections>
                                     <action selector="showARController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="atx-GQ-cwO"/>
                                 </connections>
@@ -66,16 +65,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GEn-dC-myX"/>
                             <constraint firstAttribute="bottom" secondItem="K1b-N6-ZNO" secondAttribute="bottom" id="O1A-O1-Yjt"/>
                             <constraint firstItem="K1b-N6-ZNO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OW3-K5-oTs"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7nI-rX-ZTY" secondAttribute="bottom" constant="20" id="ksv-n5-icW"/>
+                            <constraint firstItem="K1b-N6-ZNO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cuR-rZ-Jif"/>
                             <constraint firstAttribute="trailing" secondItem="K1b-N6-ZNO" secondAttribute="trailing" id="lsn-eF-blK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7nI-rX-ZTY" secondAttribute="trailing" constant="137" id="rBr-AU-G6d"/>
-                            <constraint firstItem="7nI-rX-ZTY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="rek-YU-aau"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="7nI-rX-ZTY" id="MbV-Um-JJS"/>
                         <outlet property="mapView" destination="K1b-N6-ZNO" id="pN5-a9-P0d"/>
                     </connections>
                 </viewController>
@@ -132,4 +129,7 @@
             <point key="canvasLocation" x="1678" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CameraButton" width="273" height="273"/>
+    </resources>
 </document>

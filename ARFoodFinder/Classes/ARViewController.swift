@@ -1069,7 +1069,7 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
     closeButton.setBackgroundImage(closeButtonImage, for: UIControlState.normal);
     closeButton.setBackgroundImage(#imageLiteral(resourceName: "MapIcon-Selected"), for: UIControlState.highlighted);
     closeButton.adjustsImageWhenHighlighted = false
-    closeButton.frame = CGRect(x: (self.view.bounds.size.width / 2) - 37.5, y: self.view.bounds.size.height - 95,width: 75,height: 75)
+    closeButton.frame = CGRect(x: (self.view.bounds.size.width / 2) - 37.5, y: self.view.bounds.size.height - 95, width: 75, height: 75)
     closeButton.addTarget(self, action: #selector(ARViewController.closeButtonTap), for: UIControlEvents.touchUpInside)
     closeButton.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin]
     self.view.addSubview(closeButton)
