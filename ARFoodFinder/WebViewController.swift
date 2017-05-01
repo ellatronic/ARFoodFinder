@@ -23,9 +23,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         webView.delegate = self
         view.addSubview(webView)
         guard let id = venueID  else { return }
-        print(id)
         if let url = URL(string: "https://foursquare.com/v/\(id)?ref=U0H3VHFNJFUGNIMPPZWEM5YQ5SLY2TLCBQNWZBYKYVYVX5AL") {
-            print(url)
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
