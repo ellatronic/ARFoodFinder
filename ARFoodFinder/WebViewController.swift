@@ -13,6 +13,10 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var backButton: UIButton!
     var venueID: String?
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,14 +29,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
+    }
 
-//        backButton.setImage(#imageLiteral(resourceName: "BackChevron"), for: .normal)
-//        UIEdgeInsetsMake(<#T##top: CGFloat##CGFloat#>, <#T##left: CGFloat##CGFloat#>, <#T##bottom: CGFloat##CGFloat#>, <#T##right: CGFloat##CGFloat#>)
-//        backButton.imageEdgeInsets = UIEdgeInsetsMake(4, 6, 4, backButton.frame.size.width)
-//        cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton-Selected"), for: .highlighted)
-//        cameraButton.adjustsImageWhenHighlighted = false
-//        .frame = CGRect(x: (self.view.bounds.size.width / 2) - 37.5, y: self.view.bounds.size.height - 95, width: 75, height: 75)
-//        cameraButton.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin]
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
