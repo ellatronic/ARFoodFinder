@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Bold.ttf">
-            <string>Montserrat-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="FyI-wW-esW">
@@ -23,7 +18,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Y7c-Hm-IN1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ofb-xo-Xnw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1j9-qS-YAE">
@@ -48,11 +43,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-N6-ZNO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1b-N6-ZNO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-rX-ZTY">
                                 <rect key="frame" x="150" y="572" width="75" height="75"/>
@@ -89,34 +84,45 @@
                         <viewControllerLayoutGuide type="bottom" id="NPp-Ps-CYp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="t1k-E5-oCc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ang-7e-kES">
-                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-wT-m6X">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-wT-m6X">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="7MU-pi-hWn"/>
+                                    <constraint firstAttribute="height" constant="42" id="YnR-Ti-dPF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
-                                <state key="normal" title="BACK"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="L0l-4h-Qcg" eventType="touchUpInside" id="ZDe-pA-ceJ"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackChevron" translatesAutoresizingMaskIntoConstraints="NO" id="ZzP-H7-B2S">
+                                <rect key="frame" x="5.9999999999999991" y="22" width="8.6666666666666643" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="9zl-er-Eic"/>
+                                    <constraint firstAttribute="width" constant="8.6699999999999999" id="kcV-Fz-ta4"/>
+                                </constraints>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ang-7e-kES">
+                                <rect key="frame" x="0.0" y="42" width="414" height="694"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="b6f-wT-m6X" firstAttribute="top" secondItem="ang-7e-kES" secondAttribute="bottom" id="7to-0c-bpe"/>
-                            <constraint firstAttribute="bottom" secondItem="b6f-wT-m6X" secondAttribute="bottom" id="CHQ-Js-I7n"/>
-                            <constraint firstAttribute="trailing" secondItem="b6f-wT-m6X" secondAttribute="trailing" id="Icb-UF-M6f"/>
-                            <constraint firstItem="b6f-wT-m6X" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="L4y-Nm-C4u"/>
-                            <constraint firstItem="ang-7e-kES" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="pFH-zm-t32"/>
-                            <constraint firstItem="ang-7e-kES" firstAttribute="top" secondItem="Nh7-B0-rh9" secondAttribute="bottom" id="tUB-je-LLE"/>
-                            <constraint firstAttribute="trailing" secondItem="ang-7e-kES" secondAttribute="trailing" id="wCH-DR-tLQ"/>
+                            <constraint firstItem="ZzP-H7-B2S" firstAttribute="top" secondItem="Nh7-B0-rh9" secondAttribute="bottom" constant="2" id="1vU-jw-jba"/>
+                            <constraint firstAttribute="trailing" secondItem="b6f-wT-m6X" secondAttribute="trailing" id="4ha-ez-JOB"/>
+                            <constraint firstItem="ang-7e-kES" firstAttribute="top" secondItem="b6f-wT-m6X" secondAttribute="bottom" id="HGf-Gl-vV4"/>
+                            <constraint firstItem="b6f-wT-m6X" firstAttribute="top" secondItem="t1k-E5-oCc" secondAttribute="top" id="JIK-DQ-xky"/>
+                            <constraint firstItem="b6f-wT-m6X" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="W8w-xh-pfE"/>
+                            <constraint firstItem="ang-7e-kES" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="iYn-NT-NLi"/>
+                            <constraint firstItem="ZzP-H7-B2S" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" constant="6" id="oqL-De-Iy4"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ZzP-H7-B2S" secondAttribute="trailing" constant="399.5" id="rfM-ct-SWZ"/>
+                            <constraint firstItem="ang-7e-kES" firstAttribute="top" secondItem="ZzP-H7-B2S" secondAttribute="bottom" constant="6" id="rot-C2-CSy"/>
+                            <constraint firstItem="NPp-Ps-CYp" firstAttribute="top" secondItem="ang-7e-kES" secondAttribute="bottom" id="s42-dv-5su"/>
+                            <constraint firstAttribute="trailing" secondItem="ang-7e-kES" secondAttribute="trailing" id="ysF-5S-IYe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -126,10 +132,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7in-3Y-030" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678" y="123"/>
+            <point key="canvasLocation" x="1676.8115942028987" y="122.28260869565219"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BackChevron" width="48" height="75"/>
         <image name="CameraButton" width="273" height="273"/>
     </resources>
 </document>
