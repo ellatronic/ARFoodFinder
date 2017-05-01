@@ -121,7 +121,7 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
   fileprivate var reloadLock = NSRecursiveLock()
   fileprivate var annotations: [ARAnnotation] = []
   fileprivate var activeAnnotations: [ARAnnotation] = []
-  fileprivate var closeButton: UIButton?
+  var closeButton: UIButton?
   fileprivate var currentHeading: Double = 0
   fileprivate var lastLocation: CLLocation?
 
@@ -1066,8 +1066,10 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
 
     // Close button - make it customizable
     let closeButton: UIButton = UIButton(type: UIButtonType.custom)
-    closeButton.setImage(closeButtonImage, for: UIControlState());
-    closeButton.frame = CGRect(x: self.view.bounds.size.width - 45, y: 5,width: 40,height: 40)
+    closeButton.setBackgroundImage(closeButtonImage, for: UIControlState.normal);
+    closeButton.setBackgroundImage(#imageLiteral(resourceName: "MapIcon-Selected"), for: UIControlState.highlighted);
+    closeButton.adjustsImageWhenHighlighted = false
+    closeButton.frame = CGRect(x: (self.view.bounds.size.width / 2) - 37.5, y: self.view.bounds.size.height - 95,width: 75,height: 75)
     closeButton.addTarget(self, action: #selector(ARViewController.closeButtonTap), for: UIControlEvents.touchUpInside)
     closeButton.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin]
     self.view.addSubview(closeButton)

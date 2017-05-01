@@ -30,9 +30,11 @@ class ViewController: UIViewController {
     @IBAction func showARController(_ sender: Any) {
         arViewController = ARViewController()
         arViewController.dataSource = self
-        arViewController.maxVisibleAnnotations = 30
+        arViewController.maxVisibleAnnotations = 10
         arViewController.headingSmoothingFactor = 0.05
+        arViewController.maxVerticalLevel = 3
         arViewController.setAnnotations(places)
+        arViewController.closeButtonImage = UIImage(named: "MapButton")
         self.present(arViewController, animated: true, completion: nil)
     }
 

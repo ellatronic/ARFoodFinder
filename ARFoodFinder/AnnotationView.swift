@@ -13,25 +13,25 @@ protocol AnnotationViewDelegate {
 }
 
 class AnnotationView: ARAnnotationView {
+    var backgroundView: UIView?
     var titleLabel: UILabel?
     var distanceLabel: UILabel?
     var ratingLabel: UILabel?
-    var backgroundView: UIView?
     var pinImage: UIImageView?
     var openLabel: UILabel?
     var delegate: AnnotationViewDelegate?
 
     override func didMoveToSuperview() {
-         super.didMoveToSuperview()
+        super.didMoveToSuperview()
 
         loadUI()
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
+        backgroundView?.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 70)
         titleLabel?.frame = CGRect(x: 66, y: 8, width: self.frame.size.width - 66, height: 22.0)
         distanceLabel?.frame = CGRect(x: 135.5, y: 47, width: self.frame.size.width - 135.5, height: 15.0)
-        backgroundView?.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: 70)
         pinImage = UIImageView(frame: CGRect(x: 16, y: 8, width: 37.76, height: 54))
         ratingLabel?.frame = CGRect(x: 66, y: 29.5, width: self.frame.size.width - 66, height: 18.0)
         openLabel?.frame = CGRect(x: 66, y: 47, width: self.frame.size.width  - 66, height: 15.0)
