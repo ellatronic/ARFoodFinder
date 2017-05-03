@@ -28,6 +28,11 @@ class DetailViewController: UIViewController {
     let apiManager = APIManager()
     var imageURLs = [String]()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +70,11 @@ class DetailViewController: UIViewController {
                 self.collectionView.reloadData()
             }
         }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
 
     // MARK: - IBActions
