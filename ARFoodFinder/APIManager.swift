@@ -23,8 +23,6 @@ class APIManager {
         let longitude = location.coordinate.longitude
         let baseURLString = apiURL + "?client_id=\(clientID)&client_secret=\(clientSecret)&v=\(version)&ll=\(latitude),\(longitude)&radius=\(radius)&section=\(section)&venuePhotos=1"
 
-//        print(baseURLString)
-
         guard let url = URL(string: baseURLString) else { return }
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -33,7 +31,6 @@ class APIManager {
                 guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
 
                 guard let response = json["response"] as? [String: Any] else { return }
-//                print(response)
                 guard let groups = response["groups"] as? [[String: Any]] else { return }
                 guard let group = groups.first else { return }
                 guard let items = group["items"] as? [[String: Any]] else { return }
@@ -54,9 +51,6 @@ class APIManager {
         task.resume()
     }
 
-//    func loadPlaceDetails(forPlace: Place, completion: @escaping (String) -> Void) {
-//
-//    }
     func loadVenuePhotos(forVenue venueID: String, completion: @escaping ([String]) -> Void) {
         print("Loading venue photos")
         let apiURL = "https://api.foursquare.com/v2/venues/"
@@ -64,8 +58,7 @@ class APIManager {
         let clientSecret = "OHT3B0H5FRFYIQ0NFJCXNVV1PX5WC21NWI3F20CMWOEQOFTI"
         let version = "20170425"
 
-        let baseURLString = "\(apiURL)\(venueID)/photos?client_id=\(clientID)&client_secret=\(clientSecret)&v=\(version)&limit=10"
-        print(baseURLString)
+        let baseURLString = "\(apiURL)\(venueID)/photos?client_id=\(clientID)&client_secret=\(clientSecret)&v=\(version)&limit=11"
 
         guard let url = URL(string: baseURLString) else { return }
 
@@ -75,19 +68,19 @@ class APIManager {
                 guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
 
                 guard let response = json["response"] as? [String: Any] else { return }
-                //                print(response)
-                guard let photos = response["photos"] as? [[String: Any]] else { return }
+                guard var photos = response["photos"] as? [String: Any] else { return }
                 guard let items = photos["items"] as? [[String: Any]] else { return }
-                guard let items = group["items"] as? [[String: Any]] else { return }
 
-                var places = [Place]()
-                for place in items {
-                    if let newPlace = Place.create(from: place) {
-                        places.append(newPlace)
-                    }
+                var itemsArray = [String]()
+
+                for i in 0..<items.count {
+                    guard let prefix = items[i]["prefix"] else { return }
+                    guard let suffix = items[i]["suffix"] else { return }
+                    itemsArray.append("\(prefix)original\(suffix)")
                 }
+                print(itemsArray)
 
-                completion(places)
+                completion(itemsArray)
 
             } catch {
                 print(error)

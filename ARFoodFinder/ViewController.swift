@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         //2
         arViewController.present(alert, animated: true, completion: nil)
     }
+    
     func showWebInfoView(forPlace place: Place) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         viewController.venueID = place.id
@@ -133,9 +134,6 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
     func didTouch(annotationView: AnnotationView) {
         //        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
         if let annotation = annotationView.annotation as? Place {
-//            print(annotation.name)
-//            self.showInfoView(forPlace: annotation)
-//            print(annotation.id)
 //            self.showWebInfoView(forPlace: annotation)
             self.showDetailView(forPlace: annotation)
         }
