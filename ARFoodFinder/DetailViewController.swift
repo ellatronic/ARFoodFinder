@@ -97,12 +97,14 @@ class DetailViewController: UIViewController {
         }
     }
 
-    func convertStringToURLToImage(from string: String) -> UIImage? {
-        let url = URL(string: string)
-        if let data = try? Data(contentsOf: url!) {
-            return UIImage(data: data)
+    func convertStringToURLToImage(from string: String, completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            let url = URL(string: string)
+            if let data = try? Data(contentsOf: url!) {
+                completion(UIImage(data: data))
+            }
+            completion(nil)
         }
-        return nil
     }
 
     func showWebInfoView(forPlace place: Place) {
@@ -112,10 +114,16 @@ class DetailViewController: UIViewController {
     }
 }
 
-extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let length = collectionView.frame.height
+
+        return CGSize(width: length, height: length)
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -124,9 +132,18 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
-        cell.photoImageView.image = convertStringToURLToImage(from: imageURLs[indexPath.row])
         cell.layer.shouldRasterize = true
         cell.layer.rasterizationScale = UIScreen.main.scale
+
+
+        convertStringToURLToImage(from: imageURLs[indexPath.row]) { (image) in
+            if let image = image {
+                DispatchQueue.main.async {
+                    cell.photoImageView.image = image
+                }
+            }
+        }
+        
         return cell
     }
 }

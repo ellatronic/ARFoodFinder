@@ -12,7 +12,6 @@ import CoreLocation
 class APIManager {
 
     func loadPOIs(for location: CLLocation, within radius: Int = 1000, completion: @escaping ([Place]) -> Void) {
-        print("Execute API Manager")
 
         let apiURL = "https://api.foursquare.com/v2/venues/explore"
         let clientID = "U0H3VHFNJFUGNIMPPZWEM5YQ5SLY2TLCBQNWZBYKYVYVX5AL"
@@ -52,7 +51,6 @@ class APIManager {
     }
 
     func loadVenuePhotos(forVenue venueID: String, completion: @escaping ([String]) -> Void) {
-        print("Loading venue photos")
         let apiURL = "https://api.foursquare.com/v2/venues/"
         let clientID = "U0H3VHFNJFUGNIMPPZWEM5YQ5SLY2TLCBQNWZBYKYVYVX5AL"
         let clientSecret = "OHT3B0H5FRFYIQ0NFJCXNVV1PX5WC21NWI3F20CMWOEQOFTI"
@@ -78,7 +76,6 @@ class APIManager {
                     guard let suffix = items[i]["suffix"] else { return }
                     itemsArray.append("\(prefix)original\(suffix)")
                 }
-                print(itemsArray)
 
                 completion(itemsArray)
 

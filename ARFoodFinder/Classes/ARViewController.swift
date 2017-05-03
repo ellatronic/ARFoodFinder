@@ -200,6 +200,14 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
     onViewDidAppear()   // Doing like this to prevent subclassing problems
   }
 
+    open override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        for annotationView in self.annotationViews
+        {
+            annotationView.removeFromSuperview()
+        }
+    }
+
   open override func viewDidDisappear(_ animated: Bool)
   {
     super.viewDidDisappear(animated)

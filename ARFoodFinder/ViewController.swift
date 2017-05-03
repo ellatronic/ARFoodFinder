@@ -132,9 +132,7 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
     }
 
     func didTouch(annotationView: AnnotationView) {
-        //        print("Tapped view for POI: \(String(describing: annotationView.titleLabel?.text))")
         if let annotation = annotationView.annotation as? Place {
-//            self.showWebInfoView(forPlace: annotation)
             self.showDetailView(forPlace: annotation)
         }
     }

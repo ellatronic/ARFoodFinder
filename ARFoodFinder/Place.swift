@@ -45,7 +45,6 @@ class Place: ARAnnotation {
         guard let venue = dictionary["venue"] as? [String: Any] else { return nil }
         guard let id = venue["id"] as? String else { return nil }
         guard let name = venue["name"] as? String else { return nil }
-        print(id)
 
         guard let rating = venue["rating"] as? Double else { return nil }
 
