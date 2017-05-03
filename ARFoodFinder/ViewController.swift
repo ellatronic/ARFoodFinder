@@ -59,6 +59,12 @@ class ViewController: UIViewController {
         arViewController.present(viewController, animated: true, completion: nil)
     }
 
+    func showDetailView(forPlace place: Place) {
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        viewController.place = place
+        arViewController.present(viewController, animated: true, completion: nil)
+    }
+
 }
 
 extension ViewController: CLLocationManagerDelegate {
@@ -130,7 +136,8 @@ extension ViewController: ARDataSource, AnnotationViewDelegate {
 //            print(annotation.name)
 //            self.showInfoView(forPlace: annotation)
 //            print(annotation.id)
-            self.showWebInfoView(forPlace: annotation)
+//            self.showWebInfoView(forPlace: annotation)
+            self.showDetailView(forPlace: annotation)
         }
     }
 }

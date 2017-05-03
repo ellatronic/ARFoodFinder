@@ -38,6 +38,8 @@
 		49434D611EB3C85500760CA1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49434D581EB3C85500760CA1 /* Montserrat-Regular.ttf */; };
 		49434D621EB3C85500760CA1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49434D591EB3C85500760CA1 /* Montserrat-SemiBold.ttf */; };
 		49434D631EB3C85500760CA1 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49434D5A1EB3C85500760CA1 /* Montserrat-Thin.ttf */; };
+		498D6FED1EB7F42C0079BD19 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D6FEC1EB7F42C0079BD19 /* DetailViewController.swift */; };
+		498D6FF11EB7F6A90079BD19 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498D6FF01EB7F6A90079BD19 /* ImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		49434D581EB3C85500760CA1 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		49434D591EB3C85500760CA1 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		49434D5A1EB3C85500760CA1 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		498D6FEC1EB7F42C0079BD19 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		498D6FF01EB7F6A90079BD19 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +151,9 @@
 			children = (
 				490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */,
 				490BBDF51EAFEE5D00F37467 /* ViewController.swift */,
+				498D6FEC1EB7F42C0079BD19 /* DetailViewController.swift */,
 				49434D4F1EB2859000760CA1 /* WebViewController.swift */,
+				498D6FF01EB7F6A90079BD19 /* ImageCollectionViewCell.swift */,
 				4905CA6F1EB12A99002CA57F /* AnnotationView.swift */,
 				4905CA6D1EB117BF002CA57F /* PlaceAnnotation.swift */,
 				4905CA6B1EAFFEF2002CA57F /* Place.swift */,
@@ -393,6 +399,7 @@
 				4905CA6E1EB117BF002CA57F /* PlaceAnnotation.swift in Sources */,
 				490BBE2A1EAFEF6F00F37467 /* ARAnnotation.swift in Sources */,
 				4905CA6A1EAFFC58002CA57F /* APIManager.swift in Sources */,
+				498D6FF11EB7F6A90079BD19 /* ImageCollectionViewCell.swift in Sources */,
 				490BBE2F1EAFEF6F00F37467 /* DebugMapViewController.swift in Sources */,
 				490BBE2B1EAFEF6F00F37467 /* ARAnnotationView.swift in Sources */,
 				490BBE2D1EAFEF6F00F37467 /* ARTrackingManager.swift in Sources */,
@@ -400,6 +407,7 @@
 				490BBDF41EAFEE5D00F37467 /* AppDelegate.swift in Sources */,
 				49434D501EB2859000760CA1 /* WebViewController.swift in Sources */,
 				4905CA6C1EAFFEF2002CA57F /* Place.swift in Sources */,
+				498D6FED1EB7F42C0079BD19 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

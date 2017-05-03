@@ -57,4 +57,42 @@ class APIManager {
 //    func loadPlaceDetails(forPlace: Place, completion: @escaping (String) -> Void) {
 //
 //    }
+    func loadVenuePhotos(forVenue venueID: String, completion: @escaping ([String]) -> Void) {
+        print("Loading venue photos")
+        let apiURL = "https://api.foursquare.com/v2/venues/"
+        let clientID = "U0H3VHFNJFUGNIMPPZWEM5YQ5SLY2TLCBQNWZBYKYVYVX5AL"
+        let clientSecret = "OHT3B0H5FRFYIQ0NFJCXNVV1PX5WC21NWI3F20CMWOEQOFTI"
+        let version = "20170425"
+
+        let baseURLString = "\(apiURL)\(venueID)/photos?client_id=\(clientID)&client_secret=\(clientSecret)&v=\(version)&limit=10"
+        print(baseURLString)
+
+        guard let url = URL(string: baseURLString) else { return }
+
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard error == nil, let data = data else { return }
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
+
+                guard let response = json["response"] as? [String: Any] else { return }
+                //                print(response)
+                guard let photos = response["photos"] as? [[String: Any]] else { return }
+                guard let items = photos["items"] as? [[String: Any]] else { return }
+                guard let items = group["items"] as? [[String: Any]] else { return }
+
+                var places = [Place]()
+                for place in items {
+                    if let newPlace = Place.create(from: place) {
+                        places.append(newPlace)
+                    }
+                }
+
+                completion(places)
+
+            } catch {
+                print(error)
+            }
+        }
+        task.resume()
+    }
 }
