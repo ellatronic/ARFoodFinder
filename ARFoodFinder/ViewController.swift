@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
-        //        locationManager.requestLocation()
         locationManager.requestWhenInUseAuthorization()
 
         cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton"), for: .normal)

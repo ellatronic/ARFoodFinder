@@ -44,11 +44,7 @@ class DetailViewController: UIViewController {
         featuredImage.image = place?.convertStringToURLToImage(from: (place?.photoURL)!)
         userImage.image = place?.convertStringToURLToImage(from: (place?.userImageURL)!)
 
-        toWebViewButton.setBackgroundImage(#imageLiteral(resourceName: "FourSquareButton"), for: .normal)
-//        cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton-Selected"), for: .highlighted)
-        toWebViewButton.adjustsImageWhenHighlighted = false
-        toWebViewButton.frame = CGRect(x: (self.view.bounds.size.width / 2) - 97.5, y: self.view.bounds.size.height - 53, width: 195, height: 35)
-        toWebViewButton.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin]
+        toWebViewButton.setBackgroundImage(#imageLiteral(resourceName: "FourSquareButton-Selected"), for: .highlighted)
 
         if (place?.isOpen)! {
             isOpenLabel?.text = "Open"
