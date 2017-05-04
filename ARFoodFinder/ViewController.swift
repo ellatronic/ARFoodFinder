@@ -45,14 +45,6 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Helper Functions
-    func showInfoView(forPlace place: Place) {
-        //1
-        let alert = UIAlertController(title: place.name , message: place.id, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        //2
-        arViewController.present(alert, animated: true, completion: nil)
-    }
-    
     func showWebInfoView(forPlace place: Place) {
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         viewController.venueID = place.id
@@ -83,18 +75,24 @@ extension ViewController: CLLocationManagerDelegate {
                     startedLoadingPOIs = true
 
                     let apiManager = APIManager()
-                    apiManager.loadPOIs(for: location, within: 1_000, completion: { (loadedPlaces) in
-                        print("Finding POIs")
-                        self.places = loadedPlaces
+                    apiManager.loadPOIs(for: location, within: 1_000, completion: { (places, error) in
+                        if let _ = error {
+                            let alert = UIAlertController(title: "Error", message: "Could not load points of interest. Please check Internet connection, then close and reload app.", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                            self.present(alert, animated: true, completion: nil)
+                        } else if let loadedPlaces = places {
+                            print("Finding POIs")
+                            self.places = loadedPlaces
 
-                        let annotations = loadedPlaces.map({ (place) -> PlaceAnnotation in
-                            return PlaceAnnotation(location: place.location!.coordinate, title: place.name)
-                        })
-
-                        DispatchQueue.main.async {
-                            annotations.forEach({ (annotation) in
-                                self.mapView.addAnnotation(annotation)
+                            let annotations = loadedPlaces.map({ (place) -> PlaceAnnotation in
+                                return PlaceAnnotation(location: place.location!.coordinate, title: place.name)
                             })
+
+                            DispatchQueue.main.async {
+                                annotations.forEach({ (annotation) in
+                                    self.mapView.addAnnotation(annotation)
+                                })
+                            }
                         }
                     })
                 }
