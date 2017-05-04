@@ -16,8 +16,8 @@
 		490BBDF91EAFEE5D00F37467 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490BBDF71EAFEE5D00F37467 /* Main.storyboard */; };
 		490BBDFB1EAFEE5D00F37467 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490BBDFA1EAFEE5D00F37467 /* Assets.xcassets */; };
 		490BBDFE1EAFEE5D00F37467 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490BBDFC1EAFEE5D00F37467 /* LaunchScreen.storyboard */; };
-		490BBE091EAFEE5D00F37467 /* ARFoodFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE081EAFEE5D00F37467 /* ARFoodFinderTests.swift */; };
-		490BBE141EAFEE5D00F37467 /* ARFoodFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE131EAFEE5D00F37467 /* ARFoodFinderUITests.swift */; };
+		490BBE091EAFEE5D00F37467 /* ScoutARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE081EAFEE5D00F37467 /* ScoutARTests.swift */; };
+		490BBE141EAFEE5D00F37467 /* ScoutARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE131EAFEE5D00F37467 /* ScoutARUITests.swift */; };
 		490BBE2A1EAFEF6F00F37467 /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE231EAFEF6F00F37467 /* ARAnnotation.swift */; };
 		490BBE2B1EAFEF6F00F37467 /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE241EAFEF6F00F37467 /* ARAnnotationView.swift */; };
 		490BBE2C1EAFEF6F00F37467 /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490BBE251EAFEF6F00F37467 /* ARConfiguration.swift */; };
@@ -64,18 +64,18 @@
 		4905CA6B1EAFFEF2002CA57F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		4905CA6D1EB117BF002CA57F /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		4905CA6F1EB12A99002CA57F /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		490BBDF01EAFEE5D00F37467 /* ARFoodFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARFoodFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		490BBDF01EAFEE5D00F37467 /* ScoutAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		490BBDF51EAFEE5D00F37467 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		490BBDF81EAFEE5D00F37467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		490BBDFA1EAFEE5D00F37467 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490BBDFD1EAFEE5D00F37467 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490BBDFF1EAFEE5D00F37467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		490BBE041EAFEE5D00F37467 /* ARFoodFinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARFoodFinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		490BBE081EAFEE5D00F37467 /* ARFoodFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFoodFinderTests.swift; sourceTree = "<group>"; };
+		490BBE041EAFEE5D00F37467 /* ScoutARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		490BBE081EAFEE5D00F37467 /* ScoutARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutARTests.swift; sourceTree = "<group>"; };
 		490BBE0A1EAFEE5D00F37467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		490BBE0F1EAFEE5D00F37467 /* ARFoodFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARFoodFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		490BBE131EAFEE5D00F37467 /* ARFoodFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFoodFinderUITests.swift; sourceTree = "<group>"; };
+		490BBE0F1EAFEE5D00F37467 /* ScoutARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		490BBE131EAFEE5D00F37467 /* ScoutARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutARUITests.swift; sourceTree = "<group>"; };
 		490BBE151EAFEE5D00F37467 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		490BBE231EAFEF6F00F37467 /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
 		490BBE241EAFEF6F00F37467 /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
@@ -129,9 +129,9 @@
 		490BBDE71EAFEE5D00F37467 = {
 			isa = PBXGroup;
 			children = (
-				490BBDF21EAFEE5D00F37467 /* ARFoodFinder */,
-				490BBE071EAFEE5D00F37467 /* ARFoodFinderTests */,
-				490BBE121EAFEE5D00F37467 /* ARFoodFinderUITests */,
+				490BBDF21EAFEE5D00F37467 /* ScoutAR */,
+				490BBE071EAFEE5D00F37467 /* ScoutARTests */,
+				490BBE121EAFEE5D00F37467 /* ScoutARUITests */,
 				490BBDF11EAFEE5D00F37467 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,14 +139,14 @@
 		490BBDF11EAFEE5D00F37467 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				490BBDF01EAFEE5D00F37467 /* ARFoodFinder.app */,
-				490BBE041EAFEE5D00F37467 /* ARFoodFinderTests.xctest */,
-				490BBE0F1EAFEE5D00F37467 /* ARFoodFinderUITests.xctest */,
+				490BBDF01EAFEE5D00F37467 /* ScoutAR.app */,
+				490BBE041EAFEE5D00F37467 /* ScoutARTests.xctest */,
+				490BBE0F1EAFEE5D00F37467 /* ScoutARUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		490BBDF21EAFEE5D00F37467 /* ARFoodFinder */ = {
+		490BBDF21EAFEE5D00F37467 /* ScoutAR */ = {
 			isa = PBXGroup;
 			children = (
 				490BBDF31EAFEE5D00F37467 /* AppDelegate.swift */,
@@ -165,24 +165,27 @@
 				490BBDFF1EAFEE5D00F37467 /* Info.plist */,
 				49434D511EB3C81000760CA1 /* Resources */,
 			);
+			name = ScoutAR;
 			path = ARFoodFinder;
 			sourceTree = "<group>";
 		};
-		490BBE071EAFEE5D00F37467 /* ARFoodFinderTests */ = {
+		490BBE071EAFEE5D00F37467 /* ScoutARTests */ = {
 			isa = PBXGroup;
 			children = (
-				490BBE081EAFEE5D00F37467 /* ARFoodFinderTests.swift */,
+				490BBE081EAFEE5D00F37467 /* ScoutARTests.swift */,
 				490BBE0A1EAFEE5D00F37467 /* Info.plist */,
 			);
+			name = ScoutARTests;
 			path = ARFoodFinderTests;
 			sourceTree = "<group>";
 		};
-		490BBE121EAFEE5D00F37467 /* ARFoodFinderUITests */ = {
+		490BBE121EAFEE5D00F37467 /* ScoutARUITests */ = {
 			isa = PBXGroup;
 			children = (
-				490BBE131EAFEE5D00F37467 /* ARFoodFinderUITests.swift */,
+				490BBE131EAFEE5D00F37467 /* ScoutARUITests.swift */,
 				490BBE151EAFEE5D00F37467 /* Info.plist */,
 			);
+			name = ScoutARUITests;
 			path = ARFoodFinderUITests;
 			sourceTree = "<group>";
 		};
@@ -246,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		490BBDEF1EAFEE5D00F37467 /* ARFoodFinder */ = {
+		490BBDEF1EAFEE5D00F37467 /* ScoutAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 490BBE181EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinder" */;
+			buildConfigurationList = 490BBE181EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ScoutAR" */;
 			buildPhases = (
 				490BBDEC1EAFEE5D00F37467 /* Sources */,
 				490BBDED1EAFEE5D00F37467 /* Frameworks */,
@@ -258,14 +261,14 @@
 			);
 			dependencies = (
 			);
-			name = ARFoodFinder;
+			name = ScoutAR;
 			productName = ARFoodFinder;
-			productReference = 490BBDF01EAFEE5D00F37467 /* ARFoodFinder.app */;
+			productReference = 490BBDF01EAFEE5D00F37467 /* ScoutAR.app */;
 			productType = "com.apple.product-type.application";
 		};
-		490BBE031EAFEE5D00F37467 /* ARFoodFinderTests */ = {
+		490BBE031EAFEE5D00F37467 /* ScoutARTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 490BBE1B1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinderTests" */;
+			buildConfigurationList = 490BBE1B1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ScoutARTests" */;
 			buildPhases = (
 				490BBE001EAFEE5D00F37467 /* Sources */,
 				490BBE011EAFEE5D00F37467 /* Frameworks */,
@@ -276,14 +279,14 @@
 			dependencies = (
 				490BBE061EAFEE5D00F37467 /* PBXTargetDependency */,
 			);
-			name = ARFoodFinderTests;
+			name = ScoutARTests;
 			productName = ARFoodFinderTests;
-			productReference = 490BBE041EAFEE5D00F37467 /* ARFoodFinderTests.xctest */;
+			productReference = 490BBE041EAFEE5D00F37467 /* ScoutARTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		490BBE0E1EAFEE5D00F37467 /* ARFoodFinderUITests */ = {
+		490BBE0E1EAFEE5D00F37467 /* ScoutARUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 490BBE1E1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinderUITests" */;
+			buildConfigurationList = 490BBE1E1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ScoutARUITests" */;
 			buildPhases = (
 				490BBE0B1EAFEE5D00F37467 /* Sources */,
 				490BBE0C1EAFEE5D00F37467 /* Frameworks */,
@@ -294,9 +297,9 @@
 			dependencies = (
 				490BBE111EAFEE5D00F37467 /* PBXTargetDependency */,
 			);
-			name = ARFoodFinderUITests;
+			name = ScoutARUITests;
 			productName = ARFoodFinderUITests;
-			productReference = 490BBE0F1EAFEE5D00F37467 /* ARFoodFinderUITests.xctest */;
+			productReference = 490BBE0F1EAFEE5D00F37467 /* ScoutARUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -328,7 +331,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 490BBDEB1EAFEE5D00F37467 /* Build configuration list for PBXProject "ARFoodFinder" */;
+			buildConfigurationList = 490BBDEB1EAFEE5D00F37467 /* Build configuration list for PBXProject "ScoutAR" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -341,9 +344,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				490BBDEF1EAFEE5D00F37467 /* ARFoodFinder */,
-				490BBE031EAFEE5D00F37467 /* ARFoodFinderTests */,
-				490BBE0E1EAFEE5D00F37467 /* ARFoodFinderUITests */,
+				490BBDEF1EAFEE5D00F37467 /* ScoutAR */,
+				490BBE031EAFEE5D00F37467 /* ScoutARTests */,
+				490BBE0E1EAFEE5D00F37467 /* ScoutARUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,7 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490BBE091EAFEE5D00F37467 /* ARFoodFinderTests.swift in Sources */,
+				490BBE091EAFEE5D00F37467 /* ScoutARTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490BBE141EAFEE5D00F37467 /* ARFoodFinderUITests.swift in Sources */,
+				490BBE141EAFEE5D00F37467 /* ScoutARUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,12 +435,12 @@
 /* Begin PBXTargetDependency section */
 		490BBE061EAFEE5D00F37467 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 490BBDEF1EAFEE5D00F37467 /* ARFoodFinder */;
+			target = 490BBDEF1EAFEE5D00F37467 /* ScoutAR */;
 			targetProxy = 490BBE051EAFEE5D00F37467 /* PBXContainerItemProxy */;
 		};
 		490BBE111EAFEE5D00F37467 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 490BBDEF1EAFEE5D00F37467 /* ARFoodFinder */;
+			target = 490BBDEF1EAFEE5D00F37467 /* ScoutAR */;
 			targetProxy = 490BBE101EAFEE5D00F37467 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -486,6 +489,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -536,6 +540,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -562,7 +567,7 @@
 				DEVELOPMENT_TEAM = 55GD3S5ST7;
 				INFOPLIST_FILE = ARFoodFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ARFoodFinder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ScoutAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -575,7 +580,7 @@
 				DEVELOPMENT_TEAM = 55GD3S5ST7;
 				INFOPLIST_FILE = ARFoodFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ARFoodFinder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ScoutAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -587,12 +592,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 55GD3S5ST7;
-				INFOPLIST_FILE = ARFoodFinderTests/Info.plist;
+				INFOPLIST_FILE = ScoutARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ARFoodFinderTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ScoutARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARFoodFinder.app/ARFoodFinder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoutAR.app/ScoutAR";
 			};
 			name = Debug;
 		};
@@ -602,12 +607,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 55GD3S5ST7;
-				INFOPLIST_FILE = ARFoodFinderTests/Info.plist;
+				INFOPLIST_FILE = ScoutARTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ARFoodFinderTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ScoutARTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARFoodFinder.app/ARFoodFinder";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoutAR.app/ScoutAR";
 			};
 			name = Release;
 		};
@@ -616,12 +621,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 55GD3S5ST7;
-				INFOPLIST_FILE = ARFoodFinderUITests/Info.plist;
+				INFOPLIST_FILE = ScoutARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ARFoodFinderUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ScoutARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = ARFoodFinder;
+				TEST_TARGET_NAME = ScoutAR;
 			};
 			name = Debug;
 		};
@@ -630,19 +635,19 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 55GD3S5ST7;
-				INFOPLIST_FILE = ARFoodFinderUITests/Info.plist;
+				INFOPLIST_FILE = ScoutARUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ARFoodFinderUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ellatronic.ScoutARUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = ARFoodFinder;
+				TEST_TARGET_NAME = ScoutAR;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		490BBDEB1EAFEE5D00F37467 /* Build configuration list for PBXProject "ARFoodFinder" */ = {
+		490BBDEB1EAFEE5D00F37467 /* Build configuration list for PBXProject "ScoutAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				490BBE161EAFEE5D00F37467 /* Debug */,
@@ -651,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		490BBE181EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinder" */ = {
+		490BBE181EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ScoutAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				490BBE191EAFEE5D00F37467 /* Debug */,
@@ -660,7 +665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		490BBE1B1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinderTests" */ = {
+		490BBE1B1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ScoutARTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				490BBE1C1EAFEE5D00F37467 /* Debug */,
@@ -669,7 +674,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		490BBE1E1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ARFoodFinderUITests" */ = {
+		490BBE1E1EAFEE5D00F37467 /* Build configuration list for PBXNativeTarget "ScoutARUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				490BBE1F1EAFEE5D00F37467 /* Debug */,

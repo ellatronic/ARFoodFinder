@@ -1,6 +1,6 @@
 //
 //  ImageCollectionViewCell.swift
-//  ARFoodFinder
+//  ScoutAR
 //
 //  Created by Ella on 5/1/17.
 //  Copyright © 2017 Ellatronic. All rights reserved.

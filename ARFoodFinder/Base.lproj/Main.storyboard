@@ -32,7 +32,7 @@
         <!--Detail View Controller-->
         <scene sceneID="FyI-wW-esW">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="1fR-he-AGd" customClass="DetailViewController" customModule="ARFoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="1fR-he-AGd" customClass="DetailViewController" customModule="ScoutAR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ib6-7k-OYA"/>
                         <viewControllerLayoutGuide type="bottom" id="Y7c-Hm-IN1"/>
@@ -113,7 +113,7 @@
                                     <inset key="sectionInset" minX="16" minY="0.0" maxX="15" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="vcg-nj-io3" customClass="ImageCollectionViewCell" customModule="ARFoodFinder" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCell" id="vcg-nj-io3" customClass="ImageCollectionViewCell" customModule="ScoutAR" customModuleProvider="target">
                                         <rect key="frame" x="16" y="0.0" width="150" height="147"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -151,31 +151,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQY-y3-LLR">
-                                        <rect key="frame" x="98" y="45" width="296" height="18"/>
+                                        <rect key="frame" x="97" y="45" width="297" height="18"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tip text" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpE-5F-asp">
-                                        <rect key="frame" x="98" y="64" width="296" height="18"/>
+                                        <rect key="frame" x="97" y="64" width="297" height="18"/>
                                         <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VQC-No-WNR">
-                                        <rect key="frame" x="23" y="45" width="67" height="66"/>
+                                        <rect key="frame" x="23" y="45" width="66" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VQC-No-WNR" secondAttribute="height" multiplier="1:1" id="BHI-r3-KrK"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircularMask" translatesAutoresizingMaskIntoConstraints="NO" id="FYd-eY-Q4M">
-                                        <rect key="frame" x="23" y="45" width="67" height="66"/>
+                                        <rect key="frame" x="23" y="45" width="66" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FYd-eY-Q4M" secondAttribute="height" multiplier="1:1" id="m9H-hG-8d1"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDz-nY-0fg">
-                                        <rect key="frame" x="104" y="135" width="207" height="36"/>
+                                        <rect key="frame" x="104" y="134" width="207" height="37"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zDz-nY-0fg" secondAttribute="height" multiplier="198:35" id="Q0l-CS-c8x"/>
                                         </constraints>
@@ -253,7 +253,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARFoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoutAR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -294,7 +294,7 @@
         <!--Web View Controller-->
         <scene sceneID="Jae-jo-P6S">
             <objects>
-                <viewController storyboardIdentifier="WebViewController" id="L0l-4h-Qcg" customClass="WebViewController" customModule="ARFoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebViewController" id="L0l-4h-Qcg" customClass="WebViewController" customModule="ScoutAR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nh7-B0-rh9"/>
                         <viewControllerLayoutGuide type="bottom" id="NPp-Ps-CYp"/>
@@ -336,7 +336,6 @@
                             <constraint firstItem="ang-7e-kES" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" id="iYn-NT-NLi"/>
                             <constraint firstItem="ZzP-H7-B2S" firstAttribute="leading" secondItem="t1k-E5-oCc" secondAttribute="leading" constant="6" id="oqL-De-Iy4"/>
                             <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ZzP-H7-B2S" secondAttribute="trailing" constant="399.5" id="rfM-ct-SWZ"/>
-                            <constraint firstItem="ang-7e-kES" firstAttribute="top" secondItem="ZzP-H7-B2S" secondAttribute="bottom" constant="6" id="rot-C2-CSy"/>
                             <constraint firstItem="NPp-Ps-CYp" firstAttribute="top" secondItem="ang-7e-kES" secondAttribute="bottom" id="s42-dv-5su"/>
                             <constraint firstAttribute="trailing" secondItem="ang-7e-kES" secondAttribute="trailing" id="ysF-5S-IYe"/>
                         </constraints>

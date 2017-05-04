@@ -1,6 +1,6 @@
 //
 //  WebViewController.swift
-//  ARFoodFinder
+//  ScoutAR
 //
 //  Created by Ella on 4/27/17.
 //  Copyright © 2017 Ellatronic. All rights reserved.

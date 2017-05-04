@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ARFoodFinder
+//  ScoutAR
 //
 //  Created by Ella on 4/25/17.
 //  Copyright © 2017 Ellatronic. All rights reserved.

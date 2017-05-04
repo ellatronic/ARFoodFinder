@@ -1,6 +1,6 @@
 //
 //  PlaceAnnotation.swift
-//  ARFoodFinder
+//  ScoutAR
 //
 //  Created by Ella on 4/26/17.
 //  Copyright © 2017 Ellatronic. All rights reserved.

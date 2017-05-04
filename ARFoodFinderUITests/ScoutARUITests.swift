@@ -1,6 +1,6 @@
 //
-//  ARFoodFinderUITests.swift
-//  ARFoodFinderUITests
+//  ScoutARUITests.swift
+//  ScoutARUITests
 //
 //  Created by Ella on 4/25/17.
 //  Copyright © 2017 Ellatronic. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class ARFoodFinderUITests: XCTestCase {
+class ScoutARUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
