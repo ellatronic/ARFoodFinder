@@ -26,10 +26,8 @@ class ViewController: UIViewController {
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
 
-        cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton"), for: .normal)
         cameraButton.setBackgroundImage(#imageLiteral(resourceName: "CameraButton-Selected"), for: .highlighted)
         cameraButton.adjustsImageWhenHighlighted = false
-        cameraButton.frame = CGRect(x: (self.view.bounds.size.width / 2) - 37.5, y: self.view.bounds.size.height - 95, width: 75, height: 75)
         cameraButton.autoresizingMask = [UIViewAutoresizing.flexibleLeftMargin, UIViewAutoresizing.flexibleBottomMargin]
     }
 
